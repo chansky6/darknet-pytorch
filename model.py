@@ -19,7 +19,7 @@ class Conv(nn.Module):
         padding: Optional[int] = None,
         groups: int = 1,
         dilation: int = 1,
-        inplace: bool = True,
+        inplace: bool = False,
         bias: bool = False,
     ) -> None:
         super().__init__()
