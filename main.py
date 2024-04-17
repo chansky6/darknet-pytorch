@@ -151,6 +151,7 @@ def main_worker(device, args):
 
 
 def train(train_loader, model, criterion, optimizer, epoch, device, args):
+    torch.autograd.set_detect_anomaly(True)
     batch_time = AverageMeter('Time', ':6.3f')
     data_time = AverageMeter('Data', ':6.3f')
     losses = AverageMeter('Loss', ':.4e')
