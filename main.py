@@ -62,7 +62,7 @@ def main_worker(device, args):
     global best_acc1
 
     print('=> Creating Model <=')
-    model = cspdarknet53(num_classes=1000, init_weight=True)
+    model = cspdarknet53(num_classes=10, init_weight=True)
 
     if torch.cuda.is_available():
         print("Use GPU: {} for training".format(device))
